@@ -42,12 +42,20 @@ module.exports = {
 			loader: "url-loader?limit=8192&name=images/[name].[ext]?[hash]"
 		}]
 	},
+	babel: {
+		plugins: [
+			['antd', [{
+				libraryName: "antd",
+				style: "css"
+			}]]
+		]
+	},
 	plugins: [
-		/*new webpack.optimize.UglifyJsPlugin({
+		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false
 			}
-		}),*/
+		}),
 		new ExtractTextPlugin("[hash].css"),
 		assetsPluginInstance,
 		new HtmlWebpackPlugin({

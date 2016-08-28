@@ -7,8 +7,11 @@ import {
 
 import routes from './routes';
 
+let rootDom = document.createElement('div');
+
+rootDom.setAttribute('id', 'root-dom')
 
 ReactDOM.render(
 	<Router history={browserHistory}>{routes}</Router>,
-	document.getElementById('app')
+	window.document.body.appendChild(rootDom)
 );

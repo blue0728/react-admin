@@ -1,11 +1,17 @@
 import React from 'react';
+import {
+	Row,
+	Col
+} from 'antd';
 const Root = React.createClass({
 
 	render: function() {
 		return (
 			<div id="container">
-				<h1>标题</h1>
-				{this.props.children}
+				<Row>
+					<h1>标题</h1>
+					{this.props.children}
+				</Row>
 			</div>
 		);
 	}
